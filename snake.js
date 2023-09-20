@@ -32,22 +32,6 @@ window.onload = function() {
     // update();
     setInterval(update, 1000/10); //100 milliseconds
 }
-function restart() {
-    // Reset all game variables and clear the canvas
-    gameOver = false;
-    snakeX = blockSize * 5;
-    snakeY = blockSize * 5;
-    velocityX = 0;
-    velocityY = 0;
-    snakeBody = [];
-    placeFood();
-
-    // Clear the canvas
-    context.clearRect(0, 0, board.width, board.height);
-
-    // Restart the game loop
-    update();
-}
 
 function update() {
     if (gameOver) {
